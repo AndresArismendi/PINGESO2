@@ -37,7 +37,7 @@ public class ProcesamientoSB implements ProcesamientoSBLocal {
     private AnotacionesSBLocal anotacionesSB;
 
     private int contador;
-    Neo4J db = new Neo4J("/opt/godb");
+    Neo4J db = new Neo4J("/opt/bdNeo4j/Sp3db2");
 
     public int getContador() {
         return contador;
