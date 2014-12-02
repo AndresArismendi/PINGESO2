@@ -23,8 +23,6 @@ public class TBKSB implements TBKSBLocal {
             return 0;
         }
         float wp = wuPalmerSB.CalcularWuPalmer(D1, D2, D3);
-        System.out.println("Wu Palmer: " + wp);
-        System.out.println(D1+ "  "+D2 + "  "+D3);
         int minimo = Math.min(D1+D3, D2+D3);
         float termino1 = ((1-Lambda)*minimo);
         System.out.println("Termino1: " +termino1);
