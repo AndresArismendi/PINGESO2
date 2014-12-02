@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>T.B.K.</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./template2.xhtml">
+            <ui:define name="cuerpo">
+                <div class="row">
+                    <br/>
+                    <div class="col-md-2"></div>
+                    <div class="col-lg-8 col-md-4 col-xs-0">
+                        <h2 id="titulo" style="text-align:center">TBK's Calculator</h2>
+                        <hr/>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is T.B.K.?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <p align="justify">El enfoque de la similitud de WU-Palmer  no considera que dos nodos están en una misma jerarquía cuando están en un mismo nivel de profundidad dentro del árbol como respecto al nodo raíz, y en una misma vecindad  (variación del concepto de vecindad) cuando no están en una misma jerarquía, y además uno no es ancestro o descendiente del otro. 
+                                        Con el objetivo de equilibrar esa consideración, se propone una medida de similitud basada en el conteo de aristas que es una variación de la presentada por WU-Palmer, manteniendo así sus ventajas de simplicidad del cálculo y alto rendimiento, al agregar un factor que penaliza la similitud entre dos nodos de una misma vecindad. El enfoque se crea para enfrentar el problema de identificación semántica. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How To Use T.B.K. Calculator?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <p align="justify">El enfoque de la similitud de WU-Palmer  no considera que dos nodos están en una misma jerarquía cuando están en un mismo nivel de profundidad dentro del árbol como respecto al nodo raíz, y en una misma vecindad  (variación del concepto de vecindad) cuando no están en una misma jerarquía, y además uno no es ancestro o descendiente del otro. 
+                                        Con el objetivo de equilibrar esa consideración, se propone una medida de similitud basada en el conteo de aristas que es una variación de la presentada por WU-Palmer, manteniendo así sus ventajas de simplicidad del cálculo y alto rendimiento, al agregar un factor que penaliza la similitud entre dos nodos de una misma vecindad. El enfoque se crea para enfrentar el problema de identificación semántica. </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--fin-->
+                        <p:panel header="Calculate T.B.K.">
+                            <p:growl id="msg" showDetail="true" />
+                            <h:panelGrid columns="2" cellpadding="5" cellspacing="5">
+                                <p:fileUpload style="width: 500px" value="#{fileUploadManagedBean.file}" mode="advanced" 
+                                              fileUploadListener="#{fileUploadManagedBean.fileUploadListener}" dragDropSupport="false"
+                                              update="msg" sizeLimit="10485760" 
+                                              fileLimit="10" allowTypes="/(\.|\/)(txt|csv)$/">
+                                </p:fileUpload> 
+                            </h:panelGrid>
+                            <br/>
+                            <p:commandButton  styleClass="some-button" value="Calculate T.B.K." actionListener="#{fileUploadManagedBean.calcularIndiceTBK()}" icon="ui-icon-calculator" update="resultado" />
+                            <br></br><br></br>
+                            <h:inputText id="resultado" value="#{fileUploadManagedBean.output}" style="display:none;"/>
+                            
+                            <p:commandButton id="descargar" value="Download Results" ajax="false" styleClass="some-button2" style="display:none;">
+                                <p:fileDownload value="#{fileDownloadView.downloadFileTBK()}" />
+                            </p:commandButton>
+                            <p:ajaxStatus style="display:block">
+                                <f:facet name="default">
+                                    <h:outputText value="Status: StandBy" />
+                                </f:facet>
+                                <f:facet name="start">
+                                    <h:outputText value="Status: Procesing..." />
+                                </f:facet>
+                                <f:facet name="complete">
+                                    <h:outputText value="Status: Completed" />
+                                </f:facet>
+                            </p:ajaxStatus>
+                            <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+                            <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                                <p:graphicImage value="Recursos/ajax-loader.gif" />
+                            </p:dialog>
+                            
+                        </p:panel>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                
+                <div id="prueba" style="display:none;"><br/>algo: </div>
+                
+                
+                
+                <script type="text/javascript">
+                    
+                                      
+                    function salida(){                        
+                        $("#prueba").append("algo");
+                        document.getElementById("j_idt6:descargar").style.display = "block";                        
+                        $("#prueba").append("#{fileUploadManagedBean.output}");
+                        
+                    }
+                    
+                    $(".some-button").on('click',salida);
+                  
+
+                </script>
+                
+                
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

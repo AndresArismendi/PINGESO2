@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Leacock-Chodorow</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./template2.xhtml">
+            <ui:define name="cuerpo">
+                <p:panel header="Leacock-Chodorow">
+                    <h:form>
+                        <p:panelGrid columns="2">
+                            <h:outputText value="D1: "/>
+                            <h:inputText value="#{leacockChodorowMB.d1}"></h:inputText>
+                            <h:outputText value="D2: "/>
+                            <h:inputText value="#{leacockChodorowMB.d2}"></h:inputText>
+                            <h:outputText value="D: "/>
+                            <h:inputText value="#{leacockChodorowMB.d}"></h:inputText>                              
+                        </p:panelGrid>
+                        <p:commandButton value="Calculate Leacock-Chodorow"  actionListener="#{leacockChodorowMB.func_lc()}" update="resultado" />
+                        <p:panelGrid columns="2">
+                            <h:outputText value="Output:" />
+                            <h:inputText id="resultado" value="#{leacockChodorowMB.salida}"/>
+                        </p:panelGrid>
+                    </h:form>
+                </p:panel>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
+

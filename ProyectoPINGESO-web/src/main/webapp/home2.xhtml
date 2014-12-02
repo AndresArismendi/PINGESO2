@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./template2.xhtml">
+            <ui:define name="cuerpo">
+                <!--Inicio carrusel-->    
+
+                <div id="carousel-example-generic" class="carousel slide whiteBack" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <center><img src="Recursos/img/appsolution.png"/></center>
+                            <div class="container">
+
+                                <div class="carousel-caption">
+                                    <h4 class="blackcolor"><b>University of Santiago, Chile</b></h4>
+
+                                </div>
+                            </div>    
+
+
+
+                        </div>
+                        <div class="item">
+                            <center><img src="Recursos/img/foto1.png"/></center>
+                            <div class="carousel-caption">
+                                <div class="container">
+
+                                    <div class="carousel-caption">
+
+                                        <h2><b>Quality Indices Generator</b></h2>
+                                        <h4><b>AppSolutions</b> </h4>
+
+
+                                    </div>
+                                </div>    
+
+
+
+                            </div>
+                        </div>
+
+                    </div>         
+
+
+
+                    <!-- Cointrols -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>                
+                </div>
+                <!--Fin decarrusel-->     
+                <br/><br/>
+                <div class="col-lg-12">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+
+                        <h2><b>Welcome to Quality Indices Generator</b></h2>
+                        <h4><b><i>Based on GeneOntology <span><img src="Recursos/GO.png"/></span> </i></b></h4>
+                        <hr id="hr"/>
+                        <br/><br/><br/>
+                        <p align="justify">biological indices "Quality indices generator" (QIG) is an application for calculation of biological indices, open to the scientific community.</p>
+                        <br/>
+                        <div class="well">
+                            <center><h3><p>Biological Indices</p></h3></center>
+                            <hr style="border: 0.007rem #777 solid"/>
+                            <div class="col-lg-4">
+                                <h4><a href="faces/wupalmer.xhtml"> Wu-Palmer </a></h4>
+                                <hr/>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4><a href="faces/tbk.xhtml"> T.B.K. </a></h4>
+                                <hr id="hr"/>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4><a href="faces/leacockChodorow.xhtml"> Leacock-Chodorow </a></h4>
+                                <hr id="hr"/>
+
+                                <!--<img src="Recursos/img/usach.png" alt="Wu-palmer" class="img-thumbnail" width="75"/>-->
+                            </div>
+                            <br/><br/><br/><br/><br/><br/>                            
+                           
+                        </div>
+                    </div>    
+                    <div class="col-lg-2"></div>
+                </div>
+
+
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Quality Indices Generator Based on GeneOntology</title>
+        <!-- Optional theme -->
+        <!--<h:link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"/>-->
+       <link href="Recursos/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="Recursos/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        
+        <!--<link href="Recursos/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />-->
+        <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>-->
+        <!--<script src="Recursos/js/bootstrap.js" rel="stylesheet"></script>-->
+        <!--<script src="Recursos/js/bootstrap.min.js" rel="stylesheet"></script>-->
+        <!-- Latest compiled and minified JavaScript -->
+        <!--<h:outputScript library="primefaces" name="jquery/jquery.js" target="head"/>-->
+        <!--<f:facet name="first">
+            <h:outputScript library="js" name="Recursos/js/bootstrap.js"/>
+        </f:facet>-->
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+
+
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <p:layout fullPage="true">
+                <p:layoutUnit position="center" >          
+
+                    <!--Inicio header-->    
+                    <div class="container-fluid fondoHeader3 navbar-fixed-top">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand whiteColor" href="home2.xhtml" style="color:#fff;"><i class="glyphicon glyphicon-home"/></a>
+                        </div>
+                        <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a id="drop1" href="#" class="dropdown-toggle whiteColor" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" style="color:#fff;">
+                                        Biological Indices
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="faces/wupalmer.xhtml">Wu Palmer</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="faces/tbk.xhtml">T.B.K.</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="faces/leacockChodorow.xhtml">Leacock-Chodorow</a></li>
+                                        <li role="presentation" class="divider"></li>
+                                        <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="faces/lin.xhtml">Lin</a></li>
+                                        <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="faces/jiangConrath.xhtml">Jiang-Conrath</a></li>
+                                        <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="faces/resnik.xhtml">Resnik</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a id="drop2" href="#" class="dropdown-toggle whiteColor" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" style="color:#fff;">
+                                        <span><i class="glyphicon glyphicon-question-sign whiteColor"/></span> How to use
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li id="fat-menu" class="dropdown">
+                                    <a id="drop3" href="aboutus.xhtml" class="whiteColor"  aria-haspopup="true" role="button" aria-expanded="false" style="color:#fff;">
+                                        <span><i class="glyphicon glyphicon-info-sign whiteColor"/></span> About us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Fin header-->    
+
+                    <!--Inicio contenido-->
+                    <div class="container fondoContenido tam_min" style="min-height: 900px;">
+                        <div class="row">
+                            <div class="col-lg-12" style="border-right: 1px #ccc solid;border-left: 1px #ccc solid;">
+<br/><br/>
+                                <ui:insert name="cuerpo"> </ui:insert>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-4 col-xs-0">
+                                        
+                                    </div>
+                                </div>    
+                            </div>    
+                        </div>
+                    </div>
+                    <!--Fin contenido-->
+
+
+                    
+                    
+
+
+
+
+
+
+
+                  <footer id="footer" style="border-top:1px #ccc solid">
+                        <p class="navbar-text navbar-right" style="margin-right: 20px;"><img src="Recursos/img/usach.png" alt="University of Santiago" width="40"/></p>
+                        <br/>
+                        <p class="navbar-text navbar-center">Developed by AppSolution, <a href="http://www.usach.cl" class="navbar-link">University of Santiago, Chile. </a> <span class="copyright">BIQ @2014</span></p>
+
+
+                        <br/>    
+                        <br/><br/>
+                    </footer>
+                    
+                    
+
+                    <script src="Recursos/js/bootstrap.js" rel="stylesheet"></script>
+
+
+
+                </p:layoutUnit>
+
+            </p:layout>
+
+
+
+        </h:form>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+        <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    </h:body>
+</html>
+
