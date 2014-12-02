@@ -145,8 +145,8 @@ public class ProcesamientoSB implements ProcesamientoSBLocal {
                 System.out.println("D1: " + D1);
                 D2 = db.distancia(idACM, term2);
                 System.out.println("D2: " + D2);
-                D3 = db.distancia(raiz, idACM);
-                System.out.println("D3: " + D3);
+                //D3 = db.distancia(raiz, idACM);
+                //System.out.println("D3: " + D3);
                 float lc = leacockChodorowSB.CalcularLeacockChodorow(D, D1, D2);
                 indiceLeacockChodorow = indiceLeacockChodorow + lc;
                 System.out.println("Leacock Chodorow:  " + lc);
@@ -154,7 +154,7 @@ public class ProcesamientoSB implements ProcesamientoSBLocal {
                 if (contador == largoListaPares) {
                     float indiceLCFinal = (indiceLeacockChodorow / largoListaGenes);
                     System.out.println("L.C. Final: " + indiceLCFinal);
-                    String salida = Float.toString(indiceLCFinal) + "\t|\t" + cluster;
+                    String salida = Float.toString(indiceLCFinal) + "\t\t|\t" + cluster;
                     return salida;
                 }
             }

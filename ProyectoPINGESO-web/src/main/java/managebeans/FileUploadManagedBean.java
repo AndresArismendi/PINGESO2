@@ -208,7 +208,7 @@ public class FileUploadManagedBean {
         FileWriter fw = new FileWriter("F:\\LeacockChodorow.txt");
         fw.write("LeacockChodorowIndice\t|\tCluster");
         fw.write("\n");
-        fw.write("----------------------------");
+        fw.write("------------------------------------");
         fw.write("\n");
         if (genesTotales.isEmpty() || archivoCorrecto == false) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Debe Cargar un archivo"));
