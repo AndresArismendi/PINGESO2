@@ -157,9 +157,9 @@ public class FileUploadManagedBean {
         output = "";
         FileWriter fw = new FileWriter("F:\\TBK.txt");
         fw.write("TBKIndice\t|\tCluster");
-        fw.write(System.lineSeparator());
+        fw.write("\n");
         fw.write("----------------------------");
-        fw.write(System.lineSeparator());
+        fw.write("\n");
         double timeStart, timeStop;
         if (genesTotales.isEmpty() | archivoCorrecto == false) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("First Upload Your File"));
@@ -168,6 +168,7 @@ public class FileUploadManagedBean {
                 timeStart = System.currentTimeMillis();
                 output = procesamientoSB.CoreApp(genesTotales.get(i).getGenes(), 0, genesTotales.get(i).getId());
                 fw.write(output);
+                fw.write("\n");
                 timeStop = System.currentTimeMillis();
                 double tiempoSegundos = (timeStop - timeStart) * 0.001;
                 System.out.println("Tiempo iteración: " + tiempoSegundos + " segundos");
@@ -181,9 +182,9 @@ public class FileUploadManagedBean {
         double timeStart, timeStop;
         FileWriter fw = new FileWriter("F:\\WuPalmer.txt");
         fw.write("WuPalmerIndice\t|\tCluster");
-        fw.write(System.lineSeparator());
+        fw.write("\n");
         fw.write("----------------------------");
-        fw.write(System.lineSeparator());
+        fw.write("\n");
         if (genesTotales.isEmpty() | archivoCorrecto == false) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Debe Cargar un archivo"));
         } else {
@@ -191,7 +192,7 @@ public class FileUploadManagedBean {
                 timeStart = System.currentTimeMillis();
                 output = procesamientoSB.CoreApp(genesTotales.get(i).getGenes(), 1, genesTotales.get(i).getId());
                 fw.write(output);
-                fw.write(System.lineSeparator());
+                fw.write("\n");
                 System.out.println(output);
                 timeStop = System.currentTimeMillis();
                 double tiempoSegundos = (timeStop - timeStart) * 0.001;
@@ -206,9 +207,9 @@ public class FileUploadManagedBean {
         double timeStart, timeStop;
         FileWriter fw = new FileWriter("F:\\LeacockChodorow.txt");
         fw.write("LeacockChodorowIndice\t|\tCluster");
-        fw.write(System.lineSeparator());
-        fw.write("----------------------------");
-        fw.write(System.lineSeparator());
+        fw.write("\n");
+        fw.write("------------------------------------");
+        fw.write("\n");
         if (genesTotales.isEmpty() || archivoCorrecto == false) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Debe Cargar un archivo"));
         } else {
@@ -216,6 +217,7 @@ public class FileUploadManagedBean {
                 timeStart = System.currentTimeMillis();
                 output = procesamientoSB.CoreApp(genesTotales.get(i).getGenes(), 2, genesTotales.get(i).getId());
                 fw.write(output);
+                fw.write("\n");
                 System.out.println(output);
                 timeStop = System.currentTimeMillis();
                 double tiempoSegundos = (timeStop - timeStart) * 0.001;
